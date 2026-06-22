@@ -1,0 +1,7 @@
+# Fichiers CSV trop gros (>100MB)
+data/processed/v_dashboard_export.csv
+data/powerbi_export/v_dashboard.csv
+
+# Cache Python
+__pycache__/
+*.pyc
