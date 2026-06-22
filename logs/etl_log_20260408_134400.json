@@ -1,0 +1,17 @@
+{
+  "date_traitement": "2026-04-08T13:43:03.071699",
+  "fichier_source": "données brutes laboratoire",
+  "lignes_initiales": 518096,
+  "transformations": {
+    "renommage_colonnes": "OK",
+    "typage": "OK",
+    "normalisation_fuzzy": "seuil=80%",
+    "pseudonymisation": "18398 patients anonymisés"
+  },
+  "problemes_detectes": {
+    "lignes_invalides_supprimees": 23863,
+    "doublons_supprimes": 0
+  },
+  "lignes_finales": 494233,
+  "patients_uniques": 18398
+}

@@ -1,0 +1,428 @@
+﻿id_test,nom_test
+1,% Pnn
+2,Sodium Sanguin
+3,Ggt
+4,Bilirubine Totale
+5,Crp
+6,Chlore
+7,Réserve Alcaline
+8,%Polynucleaires
+9,Calcium
+10,%Lymphocytes
+11,Ck (Cpk)
+12,Potassium Sanguin
+13,Protéines Totales
+14,Glucose
+15,%Mononucleaire
+16,Urée Sanguin
+17,Acide Urique
+18,Albumine
+19,Phosphatase Alcaline
+20,Albumine (Liquide DAscite)
+21,Triglycérides
+22,Ca 15-3
+23,Bilirubine Directe
+24,Asat
+25,Creatinine Jaffe Cinétique
+26,Tca Malade
+27,Ea-F-Actin
+28,Alpha 1 Concentration
+29,%Pne
+30,Anti-Hbs
+31,%Pnb
+32,Dp-Oj
+33,Pg-Beta-2
+34,Ldh
+35,Alat
+36,Acide Valporoique (Depakine)
+37,%Erythroblastes
+38,Cmv Igm
+39,Acide Urique (Liquide Articulaire)
+40,%Monocytes
+41,Cp-Ttg
+42,Dp-Ha
+43,Acide Folique Plasmatique (Folates)
+44,Ace
+45,Cmv Igg
+46,Bilirubine Totale Et Directe (Liquide Amniotique)
+47,Phencyclidine Qualitatif Indice
+48,Apolipoprotéine A1 (Apo A1)
+49,Cholestérol Hdl
+50,Ca-Sm
+51,Ca-Ssaro60
+52,Eaq-Nucl
+53,Dh-Sp100
+54,Ea-Ssaro60
+55,Tacrolimus T0
+56,Cc-Cenpa/B
+57,Volume Plaquettaire Moyen
+58,Ea-M2-Rec
+59,Anti-Hcv (Dépistage)
+60,Groupe Abo
+61,Dh-Lc-1
+62,Gm-Sulf
+63,Mononucleaire
+64,Gg-Gd1A
+65,Protéinurie De 24H
+66,Acide Urique Urinaire De 24H
+67,%Reticulocytes
+68,Acide Urique Urinaire
+69,Ea-Sm
+70,Dh-Ogdc-E2
+71,Ea-Gp210
+72,Amphétamine Semi-Quantitatif
+73,Béta 1 Concentration
+74,Ag Hbs (Quantitatif)
+75,Cc-Jo-1
+76,Gh Ou Sth T60
+77,Eaq-Cenp-A
+78,Anti-Hav Igg
+79,Ebv Ebna-1 Igg
+80,Cocaïne Qualitatif
+81,Calcium Urinaire De 24H
+82,Béta 2 Concentration
+83,Cortisol Freinage Minute
+84,Cyclosporine T0
+85,Benzodiazépine Qualitatif Indice
+86,Ca-Sm-Rnp
+87,Pm-Pe
+88,Glycemie T0
+89,C3
+90,Ldh (Liquide DAscite)
+91,Anticorps Anti Recepteur De La Tsh (Trak)
+92,Albumine (Liquide Pleural)
+93,Dp-Pl12
+94,Cholestérol Total
+95,Cc-Sm
+96,Chlore Lcr
+97,Potassium Urinaire
+98,Benzodiazépine Semi-Quantitatif
+99,Calcitonine
+100,Créatinine Urinaire
+101,Gh Ou Sth T0
+102,Gg-Gm3
+103,Pg-Pa
+104,Gm-Gd3
+105,Alat (Liquide Pleural)
+106,Carbamazépine
+107,T4 Libre
+108,Gh Ou Sth
+109,Fsh
+110,Cz-Sm
+111,Bnp
+112,Microalbuminurie De 24H
+113,Cortisol Urinaire
+114,Ea-Rnp
+115,Tca Temoin
+116,Ckmb (Cpkmb)
+117,Gg-Gd3
+118,Ammonium
+119,Calcium Urinaire
+120,Ca 19-9
+121,Eaq-Pl-7
+122,Phencyclidine Qualitatif
+123,Polynucleaires
+124,Ca 125
+125,Coefficient De Saturation (Cs)
+126,Ethanol
+127,Ca-Pmscl
+128,Amphétamine Qualitatif
+129,Ea-Pl12
+130,Dh-F-Actin
+131,Cortisol T60
+132,Ea-Srp
+133,Cc-Ku
+134,Urée Urinaire De 24H
+135,Beta-2-Microglobuline Urinaire
+136,Albumine Concentration
+137,Antigène Kel1
+138,Gh Ou Sth T90
+139,Eaq-Sm/Rnp
+140,Beta-2-Microglobuline
+141,Ca-Jo-1
+142,Benzodiazépine Qualitatif
+143,Lambda
+144,Ea-Pl7
+145,Amylase Pancréatique
+146,Afp
+147,Sodium Urinaire De 24H
+148,Dh-Lkm-1
+149,Protéines Totales (Pericarde)
+150,Ea-Pmscl
+151,Anti-Hbc Core M (Igm)
+152,Antigène C
+153,Gm-Gd1A
+154,Gm-Gd1B
+155,Eaq-Ku
+156,Chlore Urinaire
+157,Taux Total Des Cellules
+158,Apolipoprotéine B (Apo B)
+159,Amh
+160,Gm-Gq1B
+161,Aslo
+162,Pigf
+163,Gg-Gq1B
+164,Anti-Hav Igm
+165,Ea-Jo-1
+166,Chaines Kappa (Liées Et Libres)
+167,Bhcg Libre
+168,Ag Hbs (Qualitatif)
+169,Creatinine Enzymatique
+170,Amylasémie
+171,Anti-Hbc Ii (Igg Et Igm)
+172,Eaq-Pl-12
+173,Glycemie T90
+174,Cortisol T90
+175,Anticorps Anti Thyroperoxydase (Anti-Tpo)
+176,Alpha 2 Concentration
+177,Clairance De La Créatinine
+178,Gh Ou Sth T150
+179,Ca-Scl70
+180,Dh-Pdc-E2
+181,Eaq-Sp100
+182,Créatinine Urinaire De 24H
+183,Anti-Tg
+184,Cc-Ss-A
+185,Dh-Sla
+186,Chlore Urinaire De 24H
+187,Eaq-His
+188,Pg-Cl
+189,Cholestérol Ldl
+190,Procalcitonine
+191,Phencyclidine Semi-Quantitatif
+192,Gs-Gm2
+193,Testostérone
+194,Taux Des Globules Blancs
+195,Gs-Gd1B
+196,Bhcg Quantitatif
+197,Ldh (Pericarde)
+198,Ea-Scl70
+199,Dp-Pl7
+200,Cc-Scl70
+201,Dh-M2/Npdc
+202,Anticorps Anti-Peptides Cycliques Citrullines (Ant
+203,Peptide C
+204,Ea-Ss-B
+205,Potassium Urinaire De 24H
+206,Insuline
+207,Gg-Gm2
+208,Dp-P0
+209,Capacite Latente De Fixation De Fer (Uibc)
+210,Cz-P0
+211,Amphétamine Qualitatif Indice
+212,Cc-Ss-B
+213,Cc-Rnp
+214,Phosphore
+215,Ea-Pcna
+216,Dp-Ks
+217,Pnbasophiles
+218,Dp-Jo1
+219,Ea-Dsdna
+220,Gh Ou Sth T-30
+221,Ea-His
+222,Ea-Cenpa/B
+223,Magnesium Plasmatique
+224,Electrophorèse De L'Hémoglobine
+225,Eaq-Pmscl
+226,Cortisol T30
+227,Commentaire
+228,Dp-Ej
+229,Antigène E
+230,Proteine De Bence-Jones Sanguine
+231,Glucosurie
+232,Immunofixation Des Protides (Ou Immunoelectrophore
+233,Détermination
+234,Gh Ou Sth T30
+235,Gs-Gm1
+236,Igg Totales
+237,Cortisol Urinaire De 24H
+238,Lipase
+239,Réticulocytes
+240,Gm-Gd2
+241,Cholestérol Total (Liquide Pleural)
+242,Glycemie T60
+243,Créatinine
+244,Opiacès Semi-Quantitatif
+245,Cc-Sm/Rnp
+246,Eaq-M2-Npd
+247,Cortisol T120
+248,Ca-Cenpa/B
+249,Cortisol T15
+250,Gm-Gm1
+251,Ca-Ss-B
+252,Pm-Ps
+253,Dp-Zo
+254,Protéines Totales (Liquide Pleural)
+255,Glucosurie De 24H
+256,Chaines Lambda (Liées Et Libres)
+257,Eaq-Gp210
+258,Ea-M2-Npdc
+259,Ebv Vca Igm
+260,Cortisol Minuit
+261,Ea-Nucl
+262,Glycemie T15
+263,Cq-Glia
+264,Vancomycine
+265,Eaq-Dsdna
+266,Cz-Nucl
+267,Dhea Sulfate
+268,Pm-Pt
+269,Troponine Us
+270,Eaq-P0
+271,Eaq-Pcna
+272,Cc-Pcna
+273,Eaq-M2-Rec
+274,Cocaïne Semi-Quantitatif
+275,Gh Ou Sth T180
+276,Cq-Ttg
+277,Glucose (Liquide DAscite)
+278,Diurèse
+279,Protéines Lcr
+280,Globules Rouges
+281,Ea-Sm/Rnp
+282,Tshus
+283,Ecstasy Qualitatif Indice
+284,Dh-Gp210
+285,Pm-Pa
+286,Lymphocytes
+287,Toxo Igm
+288,Inr
+289,Protéinurie
+290,Gm-Gm2
+291,Cortisol T0
+292,Iga Totales
+293,Capacité De Fixation Par La Transferrine (Ctf)
+294,Psa Totale
+295,Psa Libre
+296,Cc-P0
+297,Rubeole Igm
+298,C4
+299,Eaq-Srp
+300,Estradiol
+301,Gg-Sulf
+302,Cc-Pmscl
+303,Pg-Ps
+304,Transferrine
+305,Glycemie T150
+306,Glycemie T30
+307,Syphilis
+308,Pg-Pg
+309,Phosphore Minéral Urinaire De 24H
+310,Gg-Gd1B
+311,Fer Sérique
+312,Cocaïne Qualitatif Indice
+313,Gm-Gm4
+314,Toxo Igg
+315,Gs-Gd2
+316,Cp-Glia
+317,Ea-Mi-2
+318,Toxoplasmose Avidité
+319,Gg-Gd2
+320,Progestérone
+321,Eaq-Scl-70
+322,Cortisol Freinage Fort
+323,D-Dimères
+324,Ccmh
+325,T3 Libre
+326,Haptoglobine
+327,Dp-Srp
+328,Facteur Rhumatoide (Rf)
+329,Lh
+330,Ea-P0
+331,Pneosinophiles
+332,Gs-Sulf
+333,Hématocrite
+334,Taux D'Hémoglobine
+335,Gs-Gt1A
+336,Ea-Ku
+337,Electrophorèse Des Protides
+338,Gm-Gt1B
+339,Eaq-Ss-A/R
+340,Gg-Gt1A
+341,Ebv Vca Igg
+342,Lipase (Liquide DAscite)
+343,Gs-Gt1B
+344,Globules Blancs
+345,Cz-His
+346,Magnésium Urinaire De 24H
+347,Groupe Rh (Antigene D)
+348,Pm-Ann
+349,Pg-Pt
+350,Glycemie T120
+351,Lithium
+352,Tp
+353,Gh Ou Sth T15
+354,Triglycérides (Liquide Pleural)
+355,Ea-Ssaro52
+356,Gm-Gt1A
+357,Pm-Pg
+358,Erythroblastes
+359,Cortisol De 8H
+360,Pnneutrophiles
+361,Pro Bnp
+362,Gg-Gm1
+363,Ea-Sp100
+364,Ferritine
+365,Pm-Cl
+366,Ldh (Liquide Pleural)
+367,Gh Ou Sth T120
+368,Dh-Bcoadc-
+369,Rapport Tca
+370,Gs-Gq1B
+371,Eaq-Jo-1
+372,Eaq-Ssaro5
+373,Pg-Pi
+374,Ecstasy Qualitatif
+375,Glycemie T180
+376,Troponine I
+377,Gamma Concentration
+378,Gs-Gd3
+379,Eaq-Sm
+380,Taux Des Plaquettes
+381,Opiacès Qualitatif Indice
+382,Immunofixation Urinaire
+383,Frottis
+384,Microalbuminurie
+385,Opiacès Qualitatif
+386,Pm-Pi
+387,Urée Urinaire
+388,Prolactine
+389,Monocytes
+390,Ecstasy Semi-Quantitatif
+391,Eaq-Ss-B
+392,Kappa
+393,Pm-Beta-2
+394,Lactate
+395,Gs-Gd1A
+396,Homocystéine
+397,Taux Des Globules Rouges
+398,Hba1C (Mmol/Mol)
+399,Gm-Gm3
+400,Eaq-Rnp
+401,Indice De Distribution Des Gr
+402,Gg-Gt1B
+403,Triglycérides (Liquide D'Ascite)
+404,Pg-Ann
+405,Tcmh
+406,Eaq-Mi-2
+407,Pg-Pe
+408,Motif De La Non-Conformité Des Échantillons
+409,Ige Totales
+410,Eaq-F-Acti
+411,Gs-Gm4
+412,Gg-Gm4
+413,Pth
+414,Rubeole Igg
+415,Gs-Gm3
+416,Vitamine B12
+417,Ratio ( K / L )
+418,Vgm
+419,Igm Totales
+420,Hiv 1/2 (Dépistage: Ag P24 + Ac Hiv1/2)
+421,Rapport Albumine/Globuline
+422,Phosphore Minéral Urinaire
+423,Hba1C (%)
+424,Pth Intact
+425,Vitamine D
+426,Protéines Totales (Liquide DAscite)
+427,Sodium Urinaire

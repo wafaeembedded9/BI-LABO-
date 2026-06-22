@@ -1,0 +1,10 @@
+{
+  "date_traitement": "2026-04-02T03:13:25.197889",
+  "lignes_initiales": 518096,
+  "problemes_detectes": {
+    "valeurs_manquantes": 112735,
+    "doublons_supprimes": 8
+  },
+  "lignes_finales": 518088,
+  "patients_uniques": 18479
+}

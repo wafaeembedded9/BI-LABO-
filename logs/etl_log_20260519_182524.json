@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-05-19T18:24:38.870311",
+  "lignes_entree": 518096,
+  "actions": {
+    "score_qualite": "calculé sur complétude + cohérence temporelle",
+    "lignes_invalides_supprimees": 23863,
+    "doublons_supprimes": 0,
+    "normalisation_fuzzy": "seuil=80%",
+    "conversion_unites": "347846 valeurs converties en unités cliniques standard",
+    "patients_pseudonymises": 18398
+  },
+  "lignes_sortie": 494233
+}

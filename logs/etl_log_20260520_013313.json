@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-20T01:32:29.015442",
+  "lignes_entree": 518096,
+  "actions": {
+    "valeurs_textuelles_tracees": 23863,
+    "age_impute_par_mediane": 603,
+    "score_qualite": "complétude (5 champs) + pénalité dates futures",
+    "lignes_invalides_supprimees": 23863,
+    "doublons_supprimes": 0,
+    "normalisation_fuzzy": "seuil=80%",
+    "services_manquants_renseignes": 106890,
+    "patients_pseudonymises": 18398
+  },
+  "lignes_sortie": 494233
+}

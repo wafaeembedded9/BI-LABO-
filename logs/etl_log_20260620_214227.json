@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-06-20T21:41:08.198123",
+  "lignes_entree": 518096,
+  "actions": {
+    "valeurs_textuelles_tracees": 23863,
+    "age_impute_par_mediane": 603,
+    "lignes_invalides_supprimees": 23863,
+    "score_qualite_moyen": 95.7,
+    "dates_futures_detectees": 0,
+    "doublons_supprimes": 0,
+    "libelles_normalises": 2349,
+    "services_manquants": 106890,
+    "patients_pseudonymises": 18398,
+    "nouveaux_patients_ce_run": 0
+  },
+  "lignes_sortie": 494233,
+  "lineage": [
+    {
+      "etape": "01_renommage_colonnes",
+      "regle": "Mapping colonnes espagnol -> français métier",
+      "lignes_entree": 518096,
+      "lignes_sortie": 518096,
+      "lignes_impactees": 0,
+      "details": "Colonnes renommées : id_patient, sexe, age, nom_test, valeur, service, date_prelevement",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "02_conversion_types",
+      "regle": "date_prelevement -> datetime (dayfirst=True), valeur -> float, age -> float",
+      "lignes_entree": 518096,
+      "lignes_sortie": 518096,
+      "lignes_impactees": 23863,
+      "details": "23863 valeurs non numériques tracées dans valeur_originale",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "03_imputation_age",
+      "regle": "Médiane de l'âge par groupe sexe (M/F/I) ; médiane globale en fallback",
+      "lignes_entree": 518096,
+      "lignes_sortie": 518096,
+      "lignes_impactees": 603,
+      "details": "603 âges imputés par médiane du groupe sexe. Fallback médiane globale utilisé pour 0 cas résiduels.",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "04_suppression_invalides",
+      "regle": "Suppression si id_patient, valeur, nom_test ou date_prelevement est vide",
+      "lignes_entree": 518096,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 23863,
+      "details": "23863 lignes supprimées (champs critiques manquants)",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "05_score_qualite",
+      "regle": "Score = complétude sur 5 champs - pénalité 0.2 si date future. Calculé après suppression des lignes invalides.",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 0,
+      "details": "Score moyen = 95.7/100. 0 dates futures détectées et pénalisées.",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "06_deduplication",
+      "regle": "Clé composite : id_patient + nom_test + date_prelevement + valeur",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 0,
+      "details": "0 doublons exacts supprimés",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "07_normalisation_libelles",
+      "regle": "RapidFuzz WRatio >= 80% -> forme canonique du catalogue officiel ; sinon Title Case",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 2349,
+      "details": "2349 libellés normalisés vers les 14 tests du catalogue. Seuil de similarité : 80%.",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "08_uniformisation_services",
+      "regle": "Service vide -> 'NON RENSEIGNE' ; strip() + upper() sur tous",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 106890,
+      "details": "106890 services vides remplacés par 'NON RENSEIGNE'",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    },
+    {
+      "etape": "09_pseudonymisation_rgpd",
+      "regle": "Tri SHA-256 + séquence stable. Mapping persisté dans patient_id_map.json. Assertion anti-collision vérifiée.",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 18398,
+      "details": "18398 patients pseudonymisés au total. 0 nouveaux patients ajoutés ce run. Zéro collision vérifiée par assertion. Mapping persisté dans data/processed/patient_id_map.json.",
+      "timestamp": "2026-06-20T21:41:08.198123"
+    }
+  ]
+}

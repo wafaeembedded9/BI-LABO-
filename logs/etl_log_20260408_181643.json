@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-08T18:15:51.068229",
+  "lignes_entree": 518096,
+  "actions": {
+    "score_qualite": "calculé sur 5 champs",
+    "lignes_invalides_supprimees": 23863,
+    "doublons_supprimes": 0,
+    "normalisation_fuzzy": "seuil=80%",
+    "patients_pseudonymises": 18398
+  },
+  "lignes_sortie": 494233
+}

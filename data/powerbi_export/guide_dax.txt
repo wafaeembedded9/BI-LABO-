@@ -1,0 +1,121 @@
+
+MESURES DAX — PFA BI & IA Laboratoire — ENSAO MGSI
+====================================================
+
+/* ── TABLE : Créer une table "Mesures" dans Power BI pour regrouper vos mesures ── */
+
+
+/* ─── KPI GLOBAUX ─────────────────────────────────────── */
+
+Nb Patients = DISTINCTCOUNT(v_dashboard[id_patient])
+
+Nb Analyses = COUNTROWS(v_dashboard)
+
+Score Qualité Moyen =
+ROUND(AVERAGE(v_dashboard[score_qualite]), 1)
+
+Nb Tests Distincts = DISTINCTCOUNT(v_dashboard[nom_test])
+
+Nb Services = DISTINCTCOUNT(v_dashboard[service])
+
+
+/* ─── ANALYSE CLINIQUE ───────────────────────────────── */
+
+Nb Anomalies =
+CALCULATE(
+    COUNTROWS(v_dashboard),
+    v_dashboard[statut_clinique] IN {"Anomalie (Bas)", "Anomalie (Haut)"}
+)
+
+Nb Normaux =
+CALCULATE(
+    COUNTROWS(v_dashboard),
+    v_dashboard[statut_clinique] = "Normal"
+)
+
+Taux Anomalie % =
+DIVIDE([Nb Anomalies], [Nb Analyses], 0) * 100
+
+Taux Normal % =
+DIVIDE([Nb Normaux], [Nb Analyses], 0) * 100
+
+Nb Anomalies Hautes =
+CALCULATE(
+    COUNTROWS(v_dashboard),
+    v_dashboard[statut_clinique] = "Anomalie (Haut)"
+)
+
+Nb Anomalies Basses =
+CALCULATE(
+    COUNTROWS(v_dashboard),
+    v_dashboard[statut_clinique] = "Anomalie (Bas)"
+)
+
+
+/* ─── ANALYSES TEMPORELLES ────────────────────────────── */
+
+Analyses Ce Mois =
+CALCULATE(
+    COUNTROWS(v_dashboard),
+    MONTH(v_dashboard[date_full]) = MONTH(TODAY()),
+    YEAR(v_dashboard[date_full])  = YEAR(TODAY())
+)
+
+Évolution MoM % =
+VAR AnalysesMois = [Nb Analyses]
+VAR AnalysesMoisPrecedent =
+    CALCULATE(
+        COUNTROWS(v_dashboard),
+        DATEADD(v_dashboard[date_full], -1, MONTH)
+    )
+RETURN
+    DIVIDE(AnalysesMois - AnalysesMoisPrecedent, AnalysesMoisPrecedent, 0) * 100
+
+
+/* ─── QUALITÉ DES DONNÉES ─────────────────────────────── */
+
+Score Qualité Min = MIN(v_dashboard[score_qualite])
+Score Qualité Max = MAX(v_dashboard[score_qualite])
+
+Nb Score Parfait =
+CALCULATE(
+    COUNTROWS(v_dashboard),
+    v_dashboard[score_qualite] = 100
+)
+
+/* Formatage texte pour carte KPI */
+Score Qualité Texte =
+FORMAT([Score Qualité Moyen], "0.0") & " / 100"
+
+
+/* ─── DÉMOGRAPHIE ─────────────────────────────────────── */
+
+Nb Patients Hommes =
+CALCULATE(
+    DISTINCTCOUNT(v_dashboard[id_patient]),
+    v_dashboard[sexe] = "M"
+)
+
+Nb Patients Femmes =
+CALCULATE(
+    DISTINCTCOUNT(v_dashboard[id_patient]),
+    v_dashboard[sexe] = "F"
+)
+
+Age Moyen =
+ROUND(AVERAGEX(
+    SUMMARIZE(v_dashboard, v_dashboard[id_patient], v_dashboard[age]),
+    v_dashboard[age]
+), 1)
+
+
+/* ─── TOP ANALYSES ────────────────────────────────────── */
+
+Volume Analyse =
+COUNTROWS(v_dashboard)
+
+Valeur Moyenne =
+ROUND(AVERAGE(v_dashboard[valeur]), 3)
+
+Valeur Médiane =
+MEDIAN(v_dashboard[valeur])

@@ -1,0 +1,9 @@
+{
+  "date_traitement": "2026-04-08T12:45:03.681247",
+  "lignes_initiales": 518096,
+  "problemes_detectes": {
+    "lignes_vides_supprimees": 23863
+  },
+  "lignes_finales": 494233,
+  "doublons_detectes": 23863
+}

@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-05-24T01:47:41.301857",
+  "lignes_entree": 518096,
+  "actions": {
+    "valeurs_textuelles_tracees": 23863,
+    "age_impute_par_mediane": 603,
+    "lignes_invalides_supprimees": 23863,
+    "score_qualite": "complétude 5 champs − pénalité date future (0.2)",
+    "doublons_supprimes": 0,
+    "normalisation_fuzzy": "WRatio, seuil=80%",
+    "services_manquants_renseignes": 106890,
+    "patients_pseudonymises": 18398,
+    "nouveaux_patients_run": 18398
+  },
+  "lignes_sortie": 494233,
+  "lineage": [
+    {
+      "etape": "1_renommage_colonnes",
+      "regle": "Mapping espagnol → français métier",
+      "lignes_entree": 518096,
+      "lignes_sortie": 518096,
+      "lignes_impactees": 0,
+      "details": "['id_patient', 'sexe', 'age', 'nom_test', 'valeur', 'service', 'date_prelevement']",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "2_conversion_types",
+      "regle": "date→datetime(dayfirst), valeur→float, age→float",
+      "lignes_entree": 518096,
+      "lignes_sortie": 518096,
+      "lignes_impactees": 23863,
+      "details": "23863 valeurs textuelles tracées dans valeur_originale",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "3_imputation_age",
+      "regle": "Médiane par groupe sexe (M/F/I)",
+      "lignes_entree": 518096,
+      "lignes_sortie": 518096,
+      "lignes_impactees": 603,
+      "details": "603 âges imputés par médiane du groupe sexe",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "4_suppression_invalides",
+      "regle": "dropna sur id_patient, valeur, nom_test, date_prelevement",
+      "lignes_entree": 518096,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 23863,
+      "details": "23863 lignes supprimées (champs critiques manquants)",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "5_score_qualite",
+      "regle": "Complétude 5 champs + pénalité 0.2 si date future (calculé post-dropna)",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 0,
+      "details": "Score moyen=95.7, dates futures=0",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "6_deduplication",
+      "regle": "Clé composite : id_patient + nom_test + date_prelevement + valeur",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 0,
+      "details": "0 doublons supprimés",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "7_normalisation_libelles",
+      "regle": "RapidFuzz WRatio >= 80% → forme canonique catalogue",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 493382,
+      "details": "493382 libellés normalisés vers les 14 tests du catalogue",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "8_uniformisation_services",
+      "regle": "fillna('Non renseigné') + strip() + upper()",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 106890,
+      "details": "106890 services manquants → 'NON RENSEIGNÉ'",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    },
+    {
+      "etape": "9_pseudonymisation_rgpd",
+      "regle": "Tri SHA-256 + index séquentiel — zéro collision — mapping persisté",
+      "lignes_entree": 494233,
+      "lignes_sortie": 494233,
+      "lignes_impactees": 18398,
+      "details": "18398 patients pseudonymisés, 18398 nouveaux ce run. Zéro collision vérifiée. Mapping persisté dans data/processed/patient_id_map.json",
+      "timestamp": "2026-05-24T01:47:41.301857"
+    }
+  ]
+}
