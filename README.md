@@ -45,7 +45,7 @@ PFA_LABORATOIRE/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### Prérequis
 - Python 3.12+
