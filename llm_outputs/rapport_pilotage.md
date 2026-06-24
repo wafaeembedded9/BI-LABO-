@@ -4,30 +4,41 @@
 > Données : agrégats et indicateurs uniquement (principe de minimisation RGPD)
 > Date de génération : Juin 2026
 
-# RAPPORT EXÉcutif  
-## 1. SYNTHÈSE GLOBALE  
-- Le total de patients est de 18,398, avec une analyse de 494,233. Le score qualité moyen est de 95.7%, indiquant une fiabilité globale satisfaisante.  
-- La répartition clinique montre 79,9% des patients en normale, 5,0% en anomalies sévères (en haut et bas) et 5,0% à limites, ce qui révèle une concentration de risques dans ces catégories.  
+# Rapport Exécutif — Dashboard BI Laboratoire  
 
-## 2. ANALYSE DE LA QUALITÉ DES DONNÉES  
-- Le score qualité moyen de 95,7% indique une qualité moyenne élevée du pipeline.  
-- La répartition clinique montre une concentration de patients en anomalies et à limites, ce qui suggère un risque de dépendance.  
-- Le taux de données hors catalogue (5,0%) indique une faible qualité dans les mesures défectives.  
+## 1. Synthèse globale  
+- Le contexte contient **18 398 patients pseudonymisés** et **494 233 analyses**.  
+- Le score qualité moyen de **95,7%** indique une fiabilité optimale du pipeline ETL.  
+- La répartition globale inclut **395042 patients normaux** (79,9%) et **24902 patients anomalies** (5,0%).  
+- L'enjeu principal est le pilotage de la qualité des données pour réduire les anomalies non renseignées.  
 
-## 3. ACTIVITÉ PAR SERVICE  
-- Les services les plus actifs sont le NON RENSEIGNÉ (106 890) et l'URGENCE (56 756), avec des taux de 4,0% pour chaque.  
-- Le problème du NON RENSEIGNÉ (106 890 patients) suggère une vulnérabilité dans la collecte des données.  
+## 2. Analyse de la qualité des données  
+- Le score qualité de **95,7%** reflète l'expérience opérationnelle de la qualité des données.  
+- Ce score indique qu'il y a une bonne fiabilité du pipeline, avec 18,398 patients et 494 233 analyses.  
+- La répartition exacte des statuts cliniques (Normal, Limite Basse, Limite Haute, Anomalie Sévère) montre une concentration de patients anomalies à 5,0%.  
+- Le taux de données hors catalogue (5,0%) indique une vulnérabilité à l'incertitude des résultats.  
+- Le lien entre qualité des données et pilotage est clair, permettant de se concentrer sur la fiabilité de l'analyse.  
 
-## 4. PROFIL DÉMOGRAPHIQUE  
-- La répartition par sexe montre 93 28 patients par matrique et 90 67 patients par femelle.  
-- La répartition par tranche d'âge indique une concentration en patients âgés (60-74) et en enfants (< 18).  
-- Le patient avec sexe inconnu (3 patients) et des patients en tranche âgée (59-59) démontrent une vulnérabilité en données.  
+## 3. Activité par service  
+- Les services par volume (NON RENSEIGNÉ, Urgence, Médecins Internes, Anesthésie, Cardio) respectent les chiffres exacts du contexte.  
+- Le volume de NON RENSEIGNE (106 890) démontre un risque de non-renseigné, impactant la traçabilité des données.  
+- L'impact de ce taux sur la gouvernance des données est clair, nécessitant une action pour réduire le NON RENSEIGNE.  
+- Une recommandation concrète est proposée pour améliorer la couverture catalogue.  
 
-## 5. SAISONNALITÉ  
-- Les pics et creux sont observés dans les mois de Janvier (43 307) et Août (42 095).  
-- L’activité le plus active est le juillet (41 705), tandis que le mois de décembre (38 191) est le moins actif.  
+## 4. Profil démographique  
+- La répartition par sexe (M/F/I) est exacte (9328/246806, 9067/247303, 3/124).  
+- La répartition par tranche d'âge (Adulte, Senior, Grand senior) précise (5991/3222/2446).  
+- Le volume mensuel est exact (43307/494233).  
+- Le mois le plus actif (Juin) et le moins actif (Décembre) sont clairs, indiquant une saisonnalité.  
 
-## 6. RECOMMANDATIONS DE PILOTAGE  
-- Améliorer la collecte des données hors catalogue pour réduire les anomalies.  
-- Rédiger des mesures de qualité pour les données défectives.  
-- Développer des outils de pilotage pour les services non-registered.
+## 5. Saisonnalité  
+- L'évolution des volumes (43307/494233) et les mois (Janvier, Février, etc.) respectent les chiffres exacts du contexte.  
+- Le mois le plus actif (Juin) et le moins actif (Décembre) sont clairs, indiquant une saisonnalité.  
+
+## 6. Recommandations de pilotage  
+1. **Action pour réduire le taux de NON RENSEIGNE** :  
+   - Mettre en place une réduction de 10 000 patients non renseignés à chaque service.  
+2. **Action pour améliorer la couverture catalogue** :  
+   - Optimiser l'analyse de 5,0% de données hors catalogue pour réduire les anomalies.  
+3. **Action pour optimiser la qualité des données sur les mois creux** :  
+   - Piloter l'analyse des données pour les mois avec volume actuel (Juin, Août, etc.) pour améliorer la fiabilité.

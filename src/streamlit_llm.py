@@ -1,10 +1,3 @@
-"""
-streamlit_llm.py — Interface web pour le module LLM Laboratoire
-PFA MGSI — ENSAO
-
-Lancement : streamlit run src/streamlit_llm.py
-"""
-
 import os
 import sys
 
@@ -23,18 +16,16 @@ from llm_labo import (
     OUTPUTS_DIR,
 )
 
-# ==============================================================
-# CONFIGURATION DE LA PAGE
-# ==============================================================
+
 st.set_page_config(
     page_title="LABO-BI — Assistant LLM",
     page_icon=":bar_chart:",
     layout="wide",
 )
 
-# ==============================================================
-# STYLE — sobre, coherent avec le theme Power BI (bleu/blanc)
-# ==============================================================
+
+
+
 st.markdown("""
 <style>
     .main-header {
@@ -72,9 +63,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ==============================================================
-# BARRE LATERALE — navigation
-# ==============================================================
+
 st.sidebar.markdown("### LABO-BI")
 st.sidebar.caption("Assistant LLM — gestion des donnees de laboratoire")
 
@@ -92,9 +81,7 @@ st.sidebar.caption(
     "- Aucune donnee patient transmise au modele"
 )
 
-# ==============================================================
-# UTILITAIRES
-# ==============================================================
+
 
 @st.cache_data
 def charger_kpis():
@@ -129,9 +116,7 @@ def afficher_kpis():
                     f'<div class="kpi-label">Tests distincts</div></div>', unsafe_allow_html=True)
 
 
-# ==============================================================
-# PAGE — ACCUEIL
-# ==============================================================
+
 if page == "Accueil":
     st.markdown('<div class="main-header">Assistant LLM — Laboratoire</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Module d\'assistance pour la documentation, le reporting '
@@ -168,16 +153,14 @@ if page == "Accueil":
         ]
         for nom, fichier in livrables:
             chemin = f"{OUTPUTS_DIR}/{fichier}"
-            statut = "✅ Genere" if os.path.exists(chemin) else "❌ Non genere"
+            statut = " Genere" if os.path.exists(chemin) else " Non genere"
             st.write(f"- {nom} : {statut}")
 
     st.markdown("---")
-    st.caption("PFA — Management et Gouvernance des Systemes d'Information — ENSAO")
+    st.caption("IA & BI pour la gestion intelligentes de data delaboratoire.Module LLM Local ")
 
 
-# ==============================================================
-# PAGE — RECHERCHE GUIDEE
-# ==============================================================
+
 elif page == "Recherche guidee":
     st.markdown('<div class="main-header">Recherche guidee</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Question en langage naturel -> requete SQL generee '
@@ -318,9 +301,7 @@ elif page == "Rapport executif":
             st.info("Aucun rapport genere pour le moment. Cliquez sur le bouton a gauche.")
 
 
-# ==============================================================
-# PAGE — DIAGNOSTICS
-# ==============================================================
+
 elif page == "Diagnostics":
     st.markdown('<div class="main-header">Diagnostics</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Etat de la base de donnees et des fichiers generes.</div>',
